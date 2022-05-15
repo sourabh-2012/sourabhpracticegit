@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<title>student registration</title>
+
+</head>
+
+<body>
+  <h1>Student Registration Form</h1>
+
+  <label> Student Name:</label>
+      <input type="text"  placeholder="Enter a name here"><br>
+
+ <br><label> Roll no:</label>
+      <input type="text"  placeholder="Enter your roll no"><br>
+
+
+<br><label> Department Name:</label>
+      <input type="text"  placeholder="Enter your department name"><br>
+
+ <br><label> Class:</label>
+      <input type="text"  placeholder="Enter your class "><br>
+
+ <br> <div id="abc"><input type="submit"  onclick="load()"> </div>
+
+ <script>
+
+function load()
+       {
+
+        var req=new XMLHttpRequest()
+        req.onreadystatechange=function(){
+            if(this.readyState==4 && this.status==200){
+                document.getElementById("abc").innerHTML=this.responseText
+            }
+        }
+
+        req.open('GET','abc.html',true)
+        req.send()
+       }
+
+
+ </script>
+
+</body>
+
+
+</html>
